@@ -33,8 +33,8 @@ class Servicios(models.Model):
 class Contratos(models.Model):
     fecha = models.DateField()
     costo = models.IntegerField()
-    clientes = models.ForeignKey(Cliente, on_delete=models.CASCADE, blank=True, null=True)
-    servicios = models.ForeignKey(Servicios, on_delete=models.CASCADE,blank=True, null=True)
+    clientes = models.ManyToManyField(Cliente)
+    servicios = models.ManyToManyField(Servicios)
 
     def __str__(self):
         return self.fecha
