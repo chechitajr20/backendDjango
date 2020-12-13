@@ -142,5 +142,6 @@ CORS_ORIGIN_WHITELIST = [
     'https://localhost:4200',
     'http://127.0.0.1:4200',
     'https://127.0.0.1:4200',
+    'https://knowtech-e6878.web.app',
 ]
 CORS_ALLOW_CREDENTIALS = True
