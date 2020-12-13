@@ -1,4 +1,4 @@
 django
 graphene_django
 django-filter
-corsheaders
+django-cors-headers
