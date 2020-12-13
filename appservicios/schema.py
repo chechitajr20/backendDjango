@@ -94,7 +94,7 @@ class ServicioInput(graphene.InputObjectType):
 
 class ContratoInput(graphene.InputObjectType):
     id = graphene.ID()
-    fecha = graphene.Date()
+    fecha = graphene.String()
     costo = graphene.Int()
     clientes = graphene.List(ClienteInput)
     servicios = graphene.List(ServicioInput)

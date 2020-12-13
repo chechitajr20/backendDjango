@@ -31,7 +31,7 @@ class Servicios(models.Model):
         ordering = ('servicio',)
 
 class Contratos(models.Model):
-    fecha = models.DateField()
+    fecha = models.CharField(max_length=25)
     costo = models.IntegerField()
     clientes = models.ManyToManyField(Cliente)
     servicios = models.ManyToManyField(Servicios)
