@@ -124,11 +124,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
+
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:4200',
     'https://localhost:4200',
     'http://127.0.0.1:4200',
     'https://127.0.0.1:4200',
-    '*',
 ]
 CORS_ALLOW_CREDENTIALS = True
