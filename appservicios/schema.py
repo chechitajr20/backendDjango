@@ -97,7 +97,7 @@ class ContratoInput(graphene.InputObjectType):
     fecha = graphene.Date()
     costo = graphene.Int()
     clientes = graphene.List(ClienteInput)
-    Servicios = graphene.List(ServicioInput)
+    servicios = graphene.List(ServicioInput)
 
 
 class UsuarioInput(graphene.InputObjectType):
@@ -243,6 +243,7 @@ class CreateContratos(graphene.Mutation):
             )
         contrato_instance.save()
         contrato_instance.clientes.set(clientes)
+        contrato_instance.servicios.set(servicios)
         return CreateContratos(ok=ok, contrato=contrato_instance)
 
 class UpdateContrato(graphene.Mutation):
