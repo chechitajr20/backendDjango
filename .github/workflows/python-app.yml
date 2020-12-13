@@ -30,4 +30,6 @@ jobs:
         python manage.py makemigrations
         python manage.py migrate
     - name: Run tests
-      run: python3 manage.py test appservicios.tests.UsuarioModelTest
+      run: python manage.py test appservicios.test.tests.UsuarioModelTest
+    - name : Run test_Cliente
+      run: python manage.py test appservicios.test.tests_cliente.ClienteModelTest
