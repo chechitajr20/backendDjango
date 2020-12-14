@@ -18,7 +18,7 @@ class Cliente(models.Model):
         return self.nombre
     
     class Meta:
-        ordering = ('nombre',)
+        ordering = ('apellido', )
     
 class Servicios(models.Model):
     servicio = models.CharField(max_length=25)
